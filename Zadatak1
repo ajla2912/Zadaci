@@ -1,0 +1,34 @@
+//Učitati matricu nxn. Ispisati u matričnom obliku datu matricu tako da svi neparni brojevi budu uvećani za 1
+#include<iostream>
+using namespace std;
+int main(){
+	
+	cout<<"Unesi dimenziju matrice nxn : ";
+	int n;
+	cin>>n;
+
+	
+	int iMatrica[n][n];
+	
+	for (int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			cout<<"Unesite ["<<i<<"]["<<j<<"] --> ";
+			cin>>iMatrica[i][j];
+		}
+	}
+	
+	int nepar;
+	
+		for (int i=0;i<n;i++){
+		for (int j=0;j<n;j++){
+			if (iMatrica[i][j]%2!=0){
+				nepar=iMatrica[i][j];
+				nepar=nepar+1;
+			}
+			cout<<nepar<<"  ";	
+		}
+		cout<<endl;
+	}
+	
+	return 0;
+}
