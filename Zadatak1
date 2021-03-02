@@ -1,3 +1,4 @@
+  
 //Učitati matricu nxn. Ispisati u matričnom obliku datu matricu tako da svi neparni brojevi budu uvećani za 1
 #include<iostream>
 using namespace std;
@@ -22,10 +23,9 @@ int main(){
 		for (int i=0;i<n;i++){
 		for (int j=0;j<n;j++){
 			if (iMatrica[i][j]%2!=0){
-				nepar=iMatrica[i][j];
-				nepar=nepar+1;
+				iMatrica[i][j]++;
 			}
-			cout<<nepar<<"  ";	
+			cout<<iMatrica[i][j]<<"  ";	
 		}
 		cout<<endl;
 	}
