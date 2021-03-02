@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	string recenica;
+    int k=0,total,brojac=0,pozicija=0,pozicija1;
+	total=0;
+	char slovo;
+	
+	cout<<"Unesite recenicu : ";
+    getline (cin, recenica);
+	cout<<"Unesite trazeno slovo (razlikuju se velika i mala) : ";
+	cin>>slovo;
+	cout<<"--------------------------------------------"<<endl;
+    for(int i=0; recenica[i] != '\0'; i++){
+		k++;
+	
+		if(recenica[i]!=' ')
+        {
+            total++;
+        }
+        if (recenica[i]==slovo){
+        	brojac++;
+		}
+		if (recenica[i]=='a' || recenica[i]=='A'){
+			cout<<"Slovo a se nalazi na "<<i+1<<". mjestu"<<endl;;
+		}
+    }
+    cout<<"--------------------------------------------"<<endl;
+    cout<<"U recenici ima "<<total<<" slova"<<endl;
+   	cout<<"--------------------------------------------"<<endl;
+	cout<<"Slovo "<<slovo<<" se pojavljuje "<<brojac<<" puta"<<endl;
+   	cout<<"--------------------------------------------"<<endl;
+   	cout<<"Recenica unazad : "<<endl;
+	  
+	  for (int i=k-1;i>=0;i--){
+   		cout<<recenica[i];
+	   }
+    return 0;
+}
